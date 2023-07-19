@@ -1,9 +1,7 @@
 import io.qameta.allure.Description;
 import net.Battle.models.UserData;
-import net.Battle.steps.AccountStep;
-import net.Battle.steps.AuthorizationFormStep;
-import net.Battle.steps.GameStep;
-import net.Battle.steps.ShopStep;
+import net.Battle.pages.BasketPage;
+import net.Battle.steps.*;
 import net.Battle.utils.JsonReader;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
@@ -20,6 +18,8 @@ public class BattleTest extends BaseTest {
     ShopStep shopStep = new ShopStep();
 
     GameStep gameStep = new GameStep();
+
+    BasketStep basketStep = new BasketStep();
 
     @Description("Check authorization  user")
     @Test(dataProvider = "userData",dataProviderClass = JsonReader.class)
@@ -43,5 +43,6 @@ public class BattleTest extends BaseTest {
         gameStep.clickAddToCartButton();
         gameStep.clickViewCartButton();
 
+        basketStep.getCardGameHearthstone();
     }
 }
