@@ -45,4 +45,22 @@ public class BattleTest extends BaseTest {
 
         basketStep.getCardGameHearthstone();
     }
+
+    @Description("Add game Call of Duty in basket")
+    @Test(dataProvider = "userData", dataProviderClass = JsonReader.class)
+    public void checkShopFormAddGameCallOfDutyInBasket(UserData userData) {
+        accountStep.logOut();
+
+        authorizationFormStep.login(userData.getEmail(),userData.getPassword());
+
+        accountStep.entranceShop();
+
+        shopStep.inputNameOfTheGame("Call of Duty Black Ops 4");
+        shopStep.clickButtonOfCertainGameCallOfDutyBlackOps4();
+
+        gameStep.clickAddToCartButton();
+        gameStep.clickViewCartButton();
+
+        basketStep.getCardGameCallOfDutyBlackOps4();
+    }
 }
