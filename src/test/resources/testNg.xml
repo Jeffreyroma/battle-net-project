@@ -6,6 +6,7 @@
             <class name="BattleTest">
                 <methods>
                     <include name="checkAuthorizationFormData"/>
+                    <include name="checkShopFormAddGameHearthstone"/>
                 </methods>
             </class>
         </classes>

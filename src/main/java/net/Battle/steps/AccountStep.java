@@ -15,4 +15,10 @@ public class AccountStep {
         accountPage.accountNavBar.click();
         accountPage.exitButton.click();
     }
+
+    @Step("Entrance to the store")
+    public void entranceShop() {
+        log.info("entrance to the store");
+        accountPage.shopButton.click();
+    }
 }
