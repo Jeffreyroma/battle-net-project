@@ -6,9 +6,9 @@ public class AuthorizationFormStep {
 
     AuthorizationFormPage authorizationFormPage = new AuthorizationFormPage();
 
-    public void login() {
-        authorizationFormPage.userNameField.setValue("romamakarcikov@gmail.com");
-        authorizationFormPage.passwordField.setValue("Bastardjeffrey123");
+    public void login(String email, String password) {
+        authorizationFormPage.userNameField.setValue(email);
+        authorizationFormPage.passwordField.setValue(password);
         authorizationFormPage.loginButton.click();
     }
 }
