@@ -1,6 +1,5 @@
 import io.qameta.allure.Description;
 import net.Battle.models.UserData;
-import net.Battle.pages.BasketPage;
 import net.Battle.steps.*;
 import net.Battle.utils.JsonReader;
 import org.openqa.selenium.By;
@@ -22,18 +21,18 @@ public class BattleTest extends BaseTest {
     BasketStep basketStep = new BasketStep();
 
     @Description("Check authorization  user")
-    @Test(dataProvider = "userData",dataProviderClass = JsonReader.class)
+    @Test(dataProvider = "userData", dataProviderClass = JsonReader.class)
     public void checkAuthorizationFormData(UserData userData) {
-        authorizationFormStep.login(userData.getEmail(),userData.getPassword());
+        authorizationFormStep.login(userData.getEmail(), userData.getPassword());
 
         $(By.xpath("//h1[@class=\"title\"]")).shouldHave(text("Обзор учетной записи"));
         accountStep.logOut();
     }
 
     @Description("Add game Hearthstone in basket")
-    @Test(dataProvider = "userData",dataProviderClass = JsonReader.class)
+    @Test(dataProvider = "userData", dataProviderClass = JsonReader.class)
     public void checkShopFormAddGameHearthstone(UserData userData) {
-        authorizationFormStep.login(userData.getEmail(),userData.getPassword());
+        authorizationFormStep.login(userData.getEmail(), userData.getPassword());
 
         accountStep.entranceShop();
 
@@ -51,7 +50,7 @@ public class BattleTest extends BaseTest {
     public void checkShopFormAddGameCallOfDutyInBasket(UserData userData) {
         accountStep.logOut();
 
-        authorizationFormStep.login(userData.getEmail(),userData.getPassword());
+        authorizationFormStep.login(userData.getEmail(), userData.getPassword());
 
         accountStep.entranceShop();
 
