@@ -9,8 +9,8 @@ public class AccountPage {
 
     public SelenideElement accountNavBar = $(By.xpath("//div[@class=\"Navbar-label Navbar-accountAuthenticated\"]"));
     public SelenideElement exitButton = $(By.xpath("//div[@class=\"Navbar-accountDropdownLinkLabel\"][text()=\"Выход\"]"));
-
     public SelenideElement shopButton = $(By.xpath("//a[@data-name=\"shop\"]"));
+    public SelenideElement textLabel = $(By.xpath("//h1[@class=\"title\"]"));
 
 
 }
