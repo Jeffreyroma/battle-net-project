@@ -20,4 +20,10 @@ public class BasketStep {
         log.info("Get card game Call of Duty Black Ops 4");
         return basketPage.gameCardCallOfDutyBlackOps4.isDisplayed();
     }
+
+    @Step("Click remove button")
+    public void clickRemoveButton() {
+        log.info("click remove button");
+        basketPage.removeButton.click();
+    }
 }

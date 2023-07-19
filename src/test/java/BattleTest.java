@@ -58,4 +58,38 @@ public class BattleTest extends BaseTest {
 
         basketStep.getCardGameCallOfDutyBlackOps4();
     }
+
+    @Description("Remove game Call of Duty Black Ops 4")
+    @Test(dataProvider = "userData", dataProviderClass = JsonReader.class)
+    public void removeGameCallOfDutyBlackOps4(UserData userData) {
+        accountStep.logOut();
+
+        authorizationFormStep.login(userData.getEmail(), userData.getPassword());
+
+        accountStep.entranceShop();
+
+        shopStep.inputNameOfTheGame("Call of Duty Black Ops 4");
+        shopStep.clickButtonOfCertainGameCallOfDutyBlackOps4();
+
+        gameStep.clickViewCartButton();
+
+        basketStep.clickRemoveButton();
+    }
+
+    @Description("Remove game Hearthstone")
+    @Test(dataProvider = "userData", dataProviderClass = JsonReader.class)
+    public void removeGameHearthstone(UserData userData) {
+        accountStep.logOut();
+
+        authorizationFormStep.login(userData.getEmail(), userData.getPassword());
+
+        accountStep.entranceShop();
+
+        shopStep.inputNameOfTheGame("Hearthstone game");
+        shopStep.clickButtonOfCertainGameHearthstone();
+
+        gameStep.clickViewCartButton();
+
+        basketStep.clickRemoveButton();
+    }
 }

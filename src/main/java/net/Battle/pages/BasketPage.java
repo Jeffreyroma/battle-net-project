@@ -10,5 +10,7 @@ public class BasketPage {
     public SelenideElement gameCardHearthstone = $(By.xpath("//div[@class=\"browsing-card\"]/h2[text()=\" Hearthstone® \"]"));
     public SelenideElement gameCardCallOfDutyBlackOps4 = $(By.xpath("//div[@class=\"browsing-card\"]/h2[text()=\" Call of Duty®: Black Ops 4 \"]"));
 
+    public SelenideElement removeButton = $(By.id("wishlist.action.remove-simplified"));
+
 
 }

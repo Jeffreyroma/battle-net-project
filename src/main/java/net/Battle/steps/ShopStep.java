@@ -17,15 +17,13 @@ public class ShopStep {
 
     @Step("Click button of certain game Hearthstone")
     public void clickButtonOfCertainGameHearthstone() {
-        log.info("click button of certain game hearthstone");
+        log.info("click button of certain game Hearthstone");
         shopPage.buttonOfCertainGameHearthstone.click();
     }
 
     @Step("Click button of certain game Call of Duty Black Ops 4")
     public void clickButtonOfCertainGameCallOfDutyBlackOps4() {
-        log.info("click button of certain game hearthstone");
+        log.info("click button of certain game Call of Duty Black Ops 4");
         shopPage.buttonOfCertainGameCallOfDutyBlackOps4.click();
     }
-
-
 }

@@ -8,6 +8,9 @@
                     <include name="checkAuthorizationFormData"/>
                     <include name="checkShopFormAddGameHearthstone"/>
                     <include name="checkShopFormAddGameCallOfDutyInBasket"/>
+                    <include name="removeGameCallOfDutyBlackOps4"/>
+                    <include name="removeGameHearthstone"/>
+
                 </methods>
             </class>
         </classes>
