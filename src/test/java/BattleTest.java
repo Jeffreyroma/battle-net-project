@@ -74,22 +74,6 @@ public class BattleTest extends BaseTest {
         gameStep.clickViewCartButton();
 
         basketStep.clickRemoveButton();
-    }
-
-    @Description("Remove game Hearthstone")
-    @Test(dataProvider = "userData", dataProviderClass = JsonReader.class)
-    public void removeGameHearthstone(UserData userData) {
-        accountStep.logOut();
-
-        authorizationFormStep.login(userData.getEmail(), userData.getPassword());
-
-        accountStep.entranceShop();
-
-        shopStep.inputNameOfTheGame("Hearthstone game");
-        shopStep.clickButtonOfCertainGameHearthstone();
-
-        gameStep.clickViewCartButton();
-
-        basketStep.clickRemoveButton();
+        basketStep.checkDeletionCallOfDuty();
     }
 }

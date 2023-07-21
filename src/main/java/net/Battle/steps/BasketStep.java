@@ -4,6 +4,8 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import net.Battle.pages.BasketPage;
 
+import static com.codeborne.selenide.CollectionCondition.size;
+
 @Log4j2
 public class BasketStep {
 
@@ -25,5 +27,11 @@ public class BasketStep {
     public void clickRemoveButton() {
         log.info("click remove button");
         basketPage.removeButton.click();
+    }
+
+    @Step("Checking for deletion Call Of Duty")
+    public void checkDeletionCallOfDuty() {
+        log.info("checking for deletion Call Of Duty");
+        basketPage.gameList.shouldHave(size(1));
     }
 }
